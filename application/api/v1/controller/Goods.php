@@ -1,6 +1,6 @@
 <?php
 
-namespace app\api\controller;
+namespace app\api\v1\controller;
 
 use think\Controller;
 use think\Db;
@@ -23,7 +23,7 @@ class Goods extends Base
         $goods_id = input('id');
         $goods_info = M('Goods')->where('goods_id', $goods_id)->find(); //商品详情
         $goods_info['comment'] = Db::name('comment')->where('goods_id', $goods_id)->select(); //评论
-        if(!empty(session('user'))){
+        if(!empty(session('user'))){ //判断用户是否收藏这件商品
             $user_id = session::get('user.user_id');
             $collect = Db::name('goods_collect')->where(['user_id'=>$user_id,'goods_id'=>$goods_id])->find();
             if(!empty($collect)){

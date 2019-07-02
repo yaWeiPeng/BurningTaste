@@ -19,6 +19,7 @@ define('EXTEND_ENTRUST', 4); //委托服务
 define('EXTEND_MINIAPP', 5);
 define("EXTEND_H5",6);//添加终端h5
 define('TIME_MOUTH', 4);
+
 /**
  * tpshop检验登陆
  * @param

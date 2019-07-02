@@ -1,5 +1,5 @@
 <?php
-namespace app\api\validate;
+namespace app\api\v1\validate;
 
 use think\Validate;
 use think\Db;

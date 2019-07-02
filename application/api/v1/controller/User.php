@@ -1,6 +1,6 @@
 <?php
 
-namespace app\api\controller;
+namespace app\api\v1\controller;
 
 use think\Controller;
 use think\Session;
